@@ -9,10 +9,10 @@
 </head>
 <body>
     <header class="header">
-        <nav class="navbar">
+        <div class="navbar">
             <div class="container">
                 <div class="navbar__wrapper">
-                    <button class="menu-button">
+                    <button class="menu-button navbar__menu-button">
                         <span class="menu-button__line"></span>
                         <span class="menu-button__line"></span>
                         <span class="menu-button__line"></span>
@@ -32,15 +32,41 @@
                     <button class="button-o navbar__button">Получить консультацию</button>
                 </div>
                 <!-- /.navbar__wrapper -->
+                <nav class="navbar__navigaion navigation">
+                    <a href="#" class="navigation__link">Главная</a>
+                    <a href="#" class="navigation__link">ПРОДУКЦИЯ</a>
+                    <a href="#" class="navigation__link">КАТАЛОГ</a>
+                    <a href="#" class="navigation__link">ПРИМЕРЫ РАБОТ</a>
+                    <a href="#" class="navigation__link">ПРИМЕРКА ИЗОБРАЖЕНИЙ</a>
+                    <a href="#" class="navigation__link">СТОИМОСТЬ ДИЛЕРАМ</a>
+                    <a href="#" class="navigation__link">О СКИНАЛИ</a>
+                </nav>
+                <!-- /.navbar__navigaion -->
             </div>
             <!-- /.container -->
-        </nav>
+        </div>
         <!-- /.navbar -->
     </header>
     <!-- /.header -->
     <main class="hero">
-
+        <div class="container">
+            <div class="hero__content">
+                <h1 class="hero__title">
+                    Гарантия минимальной цены на скинали
+                </h1>
+                <span class="hero__price">
+                    от 3 000 р/м <sup>2</sup>
+                </span>
+                <button class="button hero__button">
+                    Заказать скинали
+                </button>
+            </div>
+            <!-- /.hero__content -->
+        </div>
+        <!-- /.container -->
     </main>
     <!-- /.hero -->
+    <script src="./js/Jquery.min.js"></script>
+    <script defer src="./js/main.js"></script>
 </body>
 </html>
