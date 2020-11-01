@@ -42,8 +42,11 @@
         color: $grey
         font-size: 1rem
 .navbar
-    position: relative
-    z-index: 3
+    position: fixed
+    width: 100%
+    left: 0
+    top: 0
+    background-color: $light
     &__wrapper
         display: flex
         align-items: center
@@ -80,7 +83,7 @@
     color: $main-blue
     font-size: 12px
     font-weight: 400
-    padding: 17px 22px
+    padding: 1.214rem 1.571rem
     transition: all 0.2s
     cursor: pointer
     text-transform: uppercase
@@ -89,19 +92,25 @@
         color: $light
         background-color: $main-blue
 .navigation
+    position: fixed
+    left: 0
+    width: 100%
     background-color: $main-blue
-    min-height: 3.57rem
-    display: flex
-    align-items: center 
-    justify-content: space-around
-    transform: translateY(-500%)
     transition: all 0.3s
-    position: absolute
+    transform: translateY(-110%)
+    opacity: 0
+    &__wrapper
+        min-height: 3.57rem
+        display: flex
+        align-items: center 
+        justify-content: space-between
     &--active
         transform: translateY(0%)
+        opacity: 1
     &__link
         color: $light
         font-size: 1.21rem
         text-decoration: none
         font-weight: 300
-        text-transform: uppercase
+        text-transform: uppercase 
+    

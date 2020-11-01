@@ -8,13 +8,14 @@ const minify = require('gulp-minify');
 const htmlmin = require('gulp-htmlmin');
 const tinypng = require('gulp-tinypng-compress');
 
-
+function end(){
+    minсss();
+    compress();
+    minify_h();
+    tinyPic();
+};
 // Static server
 function bs() {
-    // minсss();
-    // compress();
-    // minify_h();
-    // tinyPic();
     serveSass();
     browserSync.init({
         server: {
@@ -82,5 +83,5 @@ function serveSass() {
 };
 
 
-
+exports.deploy = end;
 exports.serve = bs;

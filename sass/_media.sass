@@ -1,0 +1,37 @@
+@media screen and ( max-width: 1300px )
+    html
+        font-size: 12px
+@media screen and ( max-width: 991px )
+    .navigation
+        transform: translateY(-120%)
+        height: 100%
+        z-index: 2
+        &--active
+            transform: translateY(0%)
+        &__link
+            font-size: 1.8rem 
+            margin-bottom: 1rem
+            &:last-child
+                margin-bottom: 0
+        &__wrapper
+            padding-top: 3rem
+            flex-direction: column
+            align-items: flex-start 
+            z-index: 99999
+    .navbar
+        &__mobile
+            display: none
+        &__desk-phone
+            display: none
+    .hero
+        background-position: 45% -40px
+@media screen and ( max-width: 576px )
+    .logo
+        display: none
+@media screen and ( max-width: 426px )
+    .hero
+        background-position: 30% 0
+@media screen and ( max-width: 375px )
+    .button-o
+        padding: 1.214rem 0.6rem
+        margin-left: auto

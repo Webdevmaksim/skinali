@@ -333,7 +333,10 @@ html {
 
 body {
   font-family: 'Proxima Nova Regular', sans-serif;
-  font-size: 1rem; }
+  font-size: 1rem;
+  padding-top: 5.85rem; }
+  body.lock {
+    overflow: hidden; }
 
 img {
   max-width: 100%; }
@@ -346,13 +349,27 @@ img {
   text-transform: uppercase;
   font-size: 1.14rem;
   font-weight: 400;
-  cursor: pointer; }
+  cursor: pointer;
+  font-family: 'Proxima Nova Semibold', sans-serif; }
   .button:hover {
     background-color: #3866c7; }
 
 .container {
   max-width: 1170px;
   margin: auto; }
+
+@media screen and (max-width: 1199px) {
+  .container {
+    max-width: 960px; } }
+
+@media screen and (max-width: 991px) {
+  .container {
+    max-width: 750px; } }
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 0 20px; } }
 
 .menu-button {
   border: none;
@@ -397,8 +414,11 @@ img {
     font-size: 1rem; }
 
 .navbar {
-  position: relative;
-  z-index: 3; }
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: #FFFFFF; }
   .navbar__wrapper {
     display: flex;
     align-items: center;
@@ -435,7 +455,7 @@ img {
   color: #507fe1;
   font-size: 12px;
   font-weight: 400;
-  padding: 17px 22px;
+  padding: 1.214rem 1.571rem;
   transition: all 0.2s;
   cursor: pointer;
   text-transform: uppercase;
@@ -445,16 +465,21 @@ img {
     background-color: #507fe1; }
 
 .navigation {
+  position: fixed;
+  left: 0;
+  width: 100%;
   background-color: #507fe1;
-  min-height: 3.57rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  transform: translateY(-500%);
   transition: all 0.3s;
-  position: absolute; }
+  transform: translateY(-110%);
+  opacity: 0; }
+  .navigation__wrapper {
+    min-height: 3.57rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
   .navigation--active {
-    transform: translateY(0%); }
+    transform: translateY(0%);
+    opacity: 1; }
   .navigation__link {
     color: #FFFFFF;
     font-size: 1.21rem;
@@ -484,3 +509,44 @@ img {
   .hero__button {
     display: block;
     padding: 1.78rem 3.14rem; }
+
+@media screen and (max-width: 1300px) {
+  html {
+    font-size: 12px; } }
+
+@media screen and (max-width: 991px) {
+  .navigation {
+    transform: translateY(-120%);
+    height: 100%;
+    z-index: 2; }
+    .navigation--active {
+      transform: translateY(0%); }
+    .navigation__link {
+      font-size: 1.8rem;
+      margin-bottom: 1rem; }
+      .navigation__link:last-child {
+        margin-bottom: 0; }
+    .navigation__wrapper {
+      padding-top: 3rem;
+      flex-direction: column;
+      align-items: flex-start;
+      z-index: 99999; }
+  .navbar__mobile {
+    display: none; }
+  .navbar__desk-phone {
+    display: none; }
+  .hero {
+    background-position: 45% -40px; } }
+
+@media screen and (max-width: 576px) {
+  .logo {
+    display: none; } }
+
+@media screen and (max-width: 426px) {
+  .hero {
+    background-position: 30% 0; } }
+
+@media screen and (max-width: 375px) {
+  .button-o {
+    padding: 1.214rem 0.6rem;
+    margin-left: auto; } }
