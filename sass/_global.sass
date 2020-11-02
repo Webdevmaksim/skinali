@@ -10,3 +10,55 @@
     +bold
     &:hover
         background-color: $button-hover
+.form
+    &__button
+        width: 22.2857rem
+        height: 5.7142rem
+    &__label
+        margin-bottom: 1rem
+    &__send
+        padding-left: 2.2142rem
+        &::placeholder
+            color: $placeholder
+            font-weight: 300
+            font-size: 1.2142rem
+    &__input
+        width: 22.2857rem
+        height: 5.7142rem
+        border: 1px solid $input-border
+    &__group
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+    &__checkbox
+        display: none
+        &:checked + 
+            .form__check-box-label
+                &::before
+                    display: inline-block
+                    content: ''
+                    width: 2.1428rem
+                    height: 2.1428rem
+                    border: 1px solid $main-blue
+                    background-color: $main-blue 
+                    vertical-align: center
+    &__check-box-label
+        cursor: pointer
+        display: flex
+        align-items: center
+        &:nth-of-type(1)
+            margin-right: 3rem
+        &::before
+            margin-right: 1.5rem
+            display: inline-block
+            content: ''
+            width: 2.1428rem
+            height: 2.1428rem
+            border: 1px solid #dddddd 
+            vertical-align: center
+    &-row
+        display: flex
+        align-items: flex-start
+        margin-bottom: 1.7857rem
+        &:last-child
+            margin-bottom: 0

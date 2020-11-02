@@ -3,7 +3,9 @@ $(document).ready(function () {
         $('.navigation').toggleClass('navigation--active');
         $('body').toggleClass('lock');
     });
+    
     $('.navigation__link').click(function(){
         $('.navigation').toggleClass('navigation--active');
+        $('body').toggleClass('lock');
     });
 });

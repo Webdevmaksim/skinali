@@ -335,8 +335,6 @@ body {
   font-family: 'Proxima Nova Regular', sans-serif;
   font-size: 1rem;
   padding-top: 5.85rem; }
-  body.lock {
-    overflow: hidden; }
 
 img {
   max-width: 100%; }
@@ -353,6 +351,71 @@ img {
   font-family: 'Proxima Nova Semibold', sans-serif; }
   .button:hover {
     background-color: #3866c7; }
+
+.form__button {
+  width: 22.2857rem;
+  height: 5.7142rem; }
+
+.form__label {
+  margin-bottom: 1rem; }
+
+.form__send {
+  padding-left: 2.2142rem; }
+  .form__send::-moz-placeholder {
+    color: #858585;
+    font-weight: 300;
+    font-size: 1.2142rem; }
+  .form__send:-ms-input-placeholder {
+    color: #858585;
+    font-weight: 300;
+    font-size: 1.2142rem; }
+  .form__send::placeholder {
+    color: #858585;
+    font-weight: 300;
+    font-size: 1.2142rem; }
+
+.form__input {
+  width: 22.2857rem;
+  height: 5.7142rem;
+  border: 1px solid #dddddd; }
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; }
+
+.form__checkbox {
+  display: none; }
+  .form__checkbox:checked + .form__check-box-label::before {
+    display: inline-block;
+    content: '';
+    width: 2.1428rem;
+    height: 2.1428rem;
+    border: 1px solid #507fe1;
+    background-color: #507fe1;
+    vertical-align: center; }
+
+.form__check-box-label {
+  cursor: pointer;
+  display: flex;
+  align-items: center; }
+  .form__check-box-label:nth-of-type(1) {
+    margin-right: 3rem; }
+  .form__check-box-label::before {
+    margin-right: 1.5rem;
+    display: inline-block;
+    content: '';
+    width: 2.1428rem;
+    height: 2.1428rem;
+    border: 1px solid #dddddd;
+    vertical-align: center; }
+
+.form-row {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.7857rem; }
+  .form-row:last-child {
+    margin-bottom: 0; }
 
 .container {
   max-width: 1170px;
@@ -415,6 +478,7 @@ img {
 
 .navbar {
   position: fixed;
+  z-index: 999999;
   width: 100%;
   left: 0;
   top: 0;
@@ -479,7 +543,8 @@ img {
     justify-content: space-between; }
   .navigation--active {
     transform: translateY(0%);
-    opacity: 1; }
+    opacity: 1;
+    z-index: 999999999999999999; }
   .navigation__link {
     color: #FFFFFF;
     font-size: 1.21rem;
@@ -488,8 +553,8 @@ img {
     text-transform: uppercase; }
 
 .hero {
-  background-color: #f5f6f8;
-  background: #f5f6f8 url("../img/hero/hero-bg.png") no-repeat center;
+  background-color: #f1f1f1;
+  background: #f1f1f1 url("../img/hero/hero-bg.png") no-repeat center;
   background-size: cover;
   padding-top: 8.57rem;
   padding-bottom: 19.5rem; }
@@ -510,11 +575,60 @@ img {
     display: block;
     padding: 1.78rem 3.14rem; }
 
+.offer {
+  background-color: #f1f1f1; }
+  .offer-block {
+    padding: 5.7857rem 13.5714rem 5.7857rem 5.7857rem;
+    background: #FFFFFF url("../img/offer-form/main-form-bg.png") no-repeat;
+    background-position: center right;
+    background-size: contain; }
+  .offer__title {
+    color: #000000;
+    margin-bottom: 2.2142rem;
+    font-size: 1.7857rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: 'Proxima Nova Semibold', sans-serif; }
+  .offer__subtitle {
+    color: #000000;
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin-bottom: 3.4585rem;
+    display: inline-block; }
+  .offer__select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-left: 2.1428rem;
+    background: url("../img/offer-form/arrow.svg") no-repeat;
+    background-position: center right 1.4285rem;
+    color: #000000;
+    font-size: 1.1rem;
+    font-weight: 300; }
+  .offer__block {
+    transform: translateY(-7.2857rem); }
+
+.features {
+  padding-top: 7.3571rem; }
+  .features__title {
+    text-align: center;
+    margin: 0;
+    font-size: 2.1428rem;
+    font-family: 'Proxima Nova Semibold', sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 7.7857rem; }
+  .features__block {
+    display: flex;
+    flex-wrap: wrap; }
+
 @media screen and (max-width: 1300px) {
   html {
     font-size: 12px; } }
 
 @media screen and (max-width: 991px) {
+  body.lock {
+    overflow: hidden; }
   .navigation {
     transform: translateY(-120%);
     height: 100%;
