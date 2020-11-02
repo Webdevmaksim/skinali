@@ -1,0 +1,86 @@
+.catalog
+    padding-top: 7.4285rem
+    padding-bottom: 7.4285rem
+    background-color: $section-grey
+    &__link
+        margin-left: auto
+        display: inline-block
+        padding: 2.0714rem 2.2142rem
+        margin-bottom: 1.7142rem
+        &-block
+            text-align: center
+            display: block
+            margin: auto
+    &__title
+        text-align: center
+        color: $black-two
+        font-size: 2.1428rem
+        font-weight: 400
+        +bold 
+        margin-bottom: 7.1428rem
+        text-transform: uppercase
+    &__subtitle
+        font-size: 1.1428rem
+        display: block
+        color: $black-two
+        font-weight: 300
+        
+    &__block
+        display: flex
+        flex-wrap: wrap
+        margin-bottom: 4.3571rem
+    &__item
+        width: 40.7142rem
+        height: 9.2857rem
+        position: relative
+        box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1)
+        overflow: hidden
+        &:nth-of-type(odd)
+            margin-right: auto
+        &:nth-of-type(-n+6)
+            margin-bottom: 2.1428rem
+        &:hover
+            .catalog__price-bar
+                transform: translateX(0)
+    &__img
+        position: absolute
+        width: 100%
+        height: 100%
+    &__name
+        top: 0.7142rem
+        left: 0.7142rem
+        position: absolute
+        background-color: rgba(#507fe1, 0.6 )
+        color: $light
+        padding: 0.7142rem
+        text-transform: uppercase
+        font-size: 0.8571rem
+        +bold
+    &__price-bar
+        position: absolute
+        display: flex
+        right: 0
+        bottom: 0
+        transform: translateX(100%)
+        transition: all 0.3s
+        & button
+            border: none
+            cursor: pointer
+            &:nth-of-type(1)
+                color: $main-blue
+                text-transform: uppercase
+                background-color: $light
+                font-size: 0.7857rem
+                padding: 0.7142rem 1.2857rem 0.7142rem 0.7142rem
+            &:nth-of-type(2)
+                font-size: 0.7857rem
+                text-transform: uppercase
+                background-color: #6a99e9
+                color: $light
+            &:nth-of-type(3)
+                display: flex
+                justify-content: center
+                align-items: center
+                background-color: $main-blue
+            
+                

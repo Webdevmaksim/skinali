@@ -1,5 +1,6 @@
 .features
     padding-top: 7.3571rem
+    padding-bottom: 7.1428rem
     &__title
         text-align: center
         margin: 0
@@ -8,6 +9,20 @@
         text-transform: uppercase
         font-weight: 400
         margin-bottom: 7.7857rem
+        &-item
+            font-size: 1.4285rem
+            font-weight: 300
+            color: $black-two
+            text-align: center
     &__block
         display: flex
         flex-wrap: wrap
+    &__item
+        width: 33.33%
+        display: flex
+        flex-direction: column
+        align-items: center
+        &:nth-of-type(-n+3)
+            margin-bottom: 7.8571rem
+    &__img
+        margin-bottom: 2.4285rem

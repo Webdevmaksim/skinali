@@ -478,7 +478,7 @@ img {
 
 .navbar {
   position: fixed;
-  z-index: 999999;
+  z-index: 3;
   width: 100%;
   left: 0;
   top: 0;
@@ -535,7 +535,8 @@ img {
   background-color: #507fe1;
   transition: all 0.3s;
   transform: translateY(-110%);
-  opacity: 0; }
+  opacity: 0;
+  z-index: 2; }
   .navigation__wrapper {
     min-height: 3.57rem;
     display: flex;
@@ -543,8 +544,7 @@ img {
     justify-content: space-between; }
   .navigation--active {
     transform: translateY(0%);
-    opacity: 1;
-    z-index: 999999999999999999; }
+    opacity: 1; }
   .navigation__link {
     color: #FFFFFF;
     font-size: 1.21rem;
@@ -609,7 +609,8 @@ img {
     transform: translateY(-7.2857rem); }
 
 .features {
-  padding-top: 7.3571rem; }
+  padding-top: 7.3571rem;
+  padding-bottom: 7.1428rem; }
   .features__title {
     text-align: center;
     margin: 0;
@@ -618,9 +619,106 @@ img {
     text-transform: uppercase;
     font-weight: 400;
     margin-bottom: 7.7857rem; }
+    .features__title-item {
+      font-size: 1.4285rem;
+      font-weight: 300;
+      color: #000000;
+      text-align: center; }
   .features__block {
     display: flex;
     flex-wrap: wrap; }
+  .features__item {
+    width: 33.33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .features__item:nth-of-type(-n+3) {
+      margin-bottom: 7.8571rem; }
+  .features__img {
+    margin-bottom: 2.4285rem; }
+
+.catalog {
+  padding-top: 7.4285rem;
+  padding-bottom: 7.4285rem;
+  background-color: #f1f1f1; }
+  .catalog__link {
+    margin-left: auto;
+    display: inline-block;
+    padding: 2.0714rem 2.2142rem;
+    margin-bottom: 1.7142rem; }
+    .catalog__link-block {
+      text-align: center;
+      display: block;
+      margin: auto; }
+  .catalog__title {
+    text-align: center;
+    color: #000000;
+    font-size: 2.1428rem;
+    font-weight: 400;
+    font-family: 'Proxima Nova Semibold', sans-serif;
+    margin-bottom: 7.1428rem;
+    text-transform: uppercase; }
+  .catalog__subtitle {
+    font-size: 1.1428rem;
+    display: block;
+    color: #000000;
+    font-weight: 300; }
+  .catalog__block {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 4.3571rem; }
+  .catalog__item {
+    width: 40.7142rem;
+    height: 9.2857rem;
+    position: relative;
+    box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1);
+    overflow: hidden; }
+    .catalog__item:nth-of-type(odd) {
+      margin-right: auto; }
+    .catalog__item:nth-of-type(-n+6) {
+      margin-bottom: 2.1428rem; }
+    .catalog__item:hover .catalog__price-bar {
+      transform: translateX(0); }
+  .catalog__img {
+    position: absolute;
+    width: 100%;
+    height: 100%; }
+  .catalog__name {
+    top: 0.7142rem;
+    left: 0.7142rem;
+    position: absolute;
+    background-color: rgba(80, 127, 225, 0.6);
+    color: #FFFFFF;
+    padding: 0.7142rem;
+    text-transform: uppercase;
+    font-size: 0.8571rem;
+    font-family: 'Proxima Nova Semibold', sans-serif; }
+  .catalog__price-bar {
+    position: absolute;
+    display: flex;
+    right: 0;
+    bottom: 0;
+    transform: translateX(100%);
+    transition: all 0.3s; }
+    .catalog__price-bar button {
+      border: none;
+      cursor: pointer; }
+      .catalog__price-bar button:nth-of-type(1) {
+        color: #507fe1;
+        text-transform: uppercase;
+        background-color: #FFFFFF;
+        font-size: 0.7857rem;
+        padding: 0.7142rem 1.2857rem 0.7142rem 0.7142rem; }
+      .catalog__price-bar button:nth-of-type(2) {
+        font-size: 0.7857rem;
+        text-transform: uppercase;
+        background-color: #6a99e9;
+        color: #FFFFFF; }
+      .catalog__price-bar button:nth-of-type(3) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #507fe1; }
 
 @media screen and (max-width: 1300px) {
   html {
@@ -652,9 +750,20 @@ img {
   .hero {
     background-position: 45% -40px; } }
 
+@media screen and (max-width: 768px) {
+  .features__item {
+    width: 50%; }
+  .form-row {
+    flex-wrap: wrap; } }
+
 @media screen and (max-width: 576px) {
   .logo {
-    display: none; } }
+    display: none; }
+  .features__item {
+    width: 100%;
+    margin-bottom: 7.8571rem; }
+    .features__item:last-child {
+      margin-bottom: 0; } }
 
 @media screen and (max-width: 426px) {
   .hero {

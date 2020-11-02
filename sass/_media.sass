@@ -28,9 +28,22 @@
             display: none
     .hero
         background-position: 45% -40px
+@media screen and ( max-width: 768px )
+    .features
+        &__item
+            width: 50%
+    .form
+        &-row
+            flex-wrap: wrap
 @media screen and ( max-width: 576px )
     .logo
         display: none
+    .features
+        &__item
+            width: 100%
+            margin-bottom: 7.8571rem
+            &:last-child
+                margin-bottom: 0
 @media screen and ( max-width: 426px )
     .hero
         background-position: 30% 0
