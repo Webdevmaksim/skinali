@@ -417,6 +417,17 @@ img {
   .form-row:last-child {
     margin-bottom: 0; }
 
+.section-title {
+  font-size: 2.1428rem;
+  text-transform: uppercase;
+  font-family: 'Proxima Nova Semibold', sans-serif;
+  font-weight: 400;
+  color: #000000; }
+
+.flex {
+  display: flex;
+  flex-wrap: wrap; }
+
 .container {
   max-width: 1170px;
   margin: auto; }
@@ -724,6 +735,30 @@ img {
   html {
     font-size: 12px; } }
 
+@media screen and (max-width: 1200px) {
+  .catalog__block {
+    justify-content: center; }
+  .catalog__item {
+    margin-right: unset !important; }
+    .catalog__item:nth-of-type(-n+7) {
+      margin-bottom: 2.1428rem; } }
+
+@media screen and (max-width: 1024px) {
+  .features__item {
+    width: 50%; }
+  .offer__block {
+    background: #FFFFFF;
+    padding-right: 5.7857rem; }
+  .form__input {
+    width: 100%; }
+  .form__group {
+    width: 100%;
+    margin-bottom: 2rem; }
+  .catalog__price-bar {
+    transform: translateX(0%); }
+  .catalog__item:hover .catalog__price-bar {
+    transform: translateX(0); } }
+
 @media screen and (max-width: 991px) {
   body.lock {
     overflow: hidden; }
@@ -751,23 +786,39 @@ img {
     background-position: 45% -40px; } }
 
 @media screen and (max-width: 768px) {
+  .catalog__block {
+    justify-content: center; }
+  .catalog__item:nth-of-type(odd) {
+    margin-right: unset; }
+  .catalog__item:nth-of-type(-n+7) {
+    margin-bottom: 2.1428rem; }
   .features__item {
-    width: 50%; }
+    width: 100%;
+    margin-bottom: 7.8571rem; }
+    .features__item:last-child {
+      margin-bottom: 0; }
   .form-row {
     flex-wrap: wrap; } }
 
 @media screen and (max-width: 576px) {
   .logo {
-    display: none; }
-  .features__item {
-    width: 100%;
-    margin-bottom: 7.8571rem; }
-    .features__item:last-child {
-      margin-bottom: 0; } }
+    display: none; } }
+
+@media screen and (max-width: 480px) {
+  .catalog__img img {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    -o-object-fit: cover;
+    object-fit: cover; }
+  .form__button {
+    max-width: 100%; } }
 
 @media screen and (max-width: 426px) {
   .hero {
-    background-position: 30% 0; } }
+    background-position: 30% 0; }
+  .form__check-box-label {
+    margin-bottom: 2rem; } }
 
 @media screen and (max-width: 375px) {
   .button-o {

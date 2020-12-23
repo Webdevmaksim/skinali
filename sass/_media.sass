@@ -1,6 +1,36 @@
 @media screen and ( max-width: 1300px )
     html
         font-size: 12px
+@media screen and ( max-width: 1200px )
+    .catalog
+        &__block
+            justify-content: center   
+        &__item
+            margin-right: unset !important
+            &:nth-of-type(-n+7)
+                margin-bottom: 2.1428rem
+                     
+@media screen and ( max-width: 1024px )
+    .features
+        &__item
+            width: 50%
+    .offer
+        &__block
+            background: $light
+            padding-right: 5.7857rem
+    .form
+        &__input
+            width: 100%
+        &__group
+            width: 100%
+            margin-bottom: 2rem
+    .catalog
+        &__price-bar
+            transform: translateX(0%)
+        &__item
+            &:hover
+                .catalog__price-bar
+                    transform: translateX(0)
 @media screen and ( max-width: 991px )
     body
         &.lock
@@ -29,24 +59,43 @@
     .hero
         background-position: 45% -40px
 @media screen and ( max-width: 768px )
+    .catalog
+        &__block
+            justify-content: center
+        &__item
+            &:nth-of-type(odd)
+                margin-right: unset
+            &:nth-of-type(-n+7)
+                margin-bottom: 2.1428rem
     .features
         &__item
-            width: 50%
+            width: 100% 
+            margin-bottom: 7.8571rem
+            &:last-child
+                margin-bottom: 0
     .form
         &-row
             flex-wrap: wrap
 @media screen and ( max-width: 576px )
     .logo
         display: none
-    .features
-        &__item
-            width: 100%
-            margin-bottom: 7.8571rem
-            &:last-child
-                margin-bottom: 0
+    .catalog
+
+@media screen and ( max-width: 480px )
+    .catalog
+        &__img
+            & img
+                height: fit-content
+                object-fit: cover       
+    .form
+        &__button
+            max-width: 100%    
 @media screen and ( max-width: 426px )
     .hero
         background-position: 30% 0
+    .form
+        &__check-box-label
+            margin-bottom: 2rem
 @media screen and ( max-width: 375px )
     .button-o
         padding: 1.214rem 0.6rem

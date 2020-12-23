@@ -8,6 +8,7 @@ const minify = require('gulp-minify');
 const htmlmin = require('gulp-htmlmin');
 const tinypng = require('gulp-tinypng-compress');
 
+//deploy
 function end(){
     minсss();
     compress();
