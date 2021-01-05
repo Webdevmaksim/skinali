@@ -30,6 +30,7 @@
         display: flex
         flex-direction: column
         align-items: flex-start
+        position: relative
     &__checkbox
         display: none
         &:checked + 
@@ -65,9 +66,17 @@
 .section-title
     font-size: 2.1428rem
     text-transform: uppercase
+    text-align: center
     +bold
     font-weight: 400
     color: $black-two
 .flex
     display: flex
     flex-wrap: wrap
+.blog-card
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-decoration: none
+    color: $black-two
+    box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1)
