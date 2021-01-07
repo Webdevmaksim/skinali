@@ -818,7 +818,7 @@ img {
   .price__col:nth-of-type(-n+4) {
     margin-bottom: 0.6428rem; }
   .price__card {
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
     position: relative; }
     .price__card-img {
       width: 20.4285rem;
@@ -858,7 +858,7 @@ img {
     padding: 1.4285rem;
     padding-top: 0;
     background-color: #FFFFFF;
-    transition: all 0.3s;
+    transition: 0.3s ease-in-out;
     z-index: -1; }
 
 @media screen and (max-width: 1199px) {
