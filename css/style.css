@@ -637,6 +637,11 @@ img {
     font-size: 1.2rem;
     pointer-events: none; }
 
+@media screen and (max-width: 321px) {
+  .offer-block {
+    padding-left: 15px;
+    padding-right: 15px !important; } }
+
 .features {
   padding-top: 7.3571rem;
   padding-bottom: 7.1428rem; }
