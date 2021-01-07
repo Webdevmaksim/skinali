@@ -1,0 +1,60 @@
+.stages
+    padding: 7.1428rem 0
+    background-color: $section-grey
+    &__title
+        margin-bottom: 6.4285rem
+    &__col
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__block
+        justify-content: space-between
+        position: relative
+        &::before
+            content: ''
+            background-color: rgba(126, 123, 120, 0.4)
+            height: 3px
+            width: 90%
+            position: absolute
+            margin-left: auto
+            margin-right: auto
+            left: 0
+            right: 0
+            top: 5.5rem
+    &__img
+        margin-bottom: 1.9285rem
+    &__item-name
+        +bold
+        color: $black-two
+        font-size: 1.2857rem
+        margin-bottom: 2.0714rem
+    &__description
+        text-align: center
+        max-width: 10rem
+        color: $black-two
+        font-size: 1rem
+        +reg
+@media screen and ( max-width: 1199px )
+    .stages
+        &__block
+            &::before
+                display: none
+        &__col
+            flex-basis: 33.33%
+            &:nth-of-type(-n+3)
+                margin-bottom: 4rem
+@media screen and ( max-width: 1024px )
+    .stages
+        &__description
+            font-size: 1.3rem
+            max-width: 14rem
+        &__col
+            flex-basis: 50%
+            &:nth-of-type(-n+4)
+                margin-bottom: 4rem
+@media screen and ( max-width: 575px )
+    .stages
+        &__col
+            flex-basis: 100%
+            &:nth-of-type(-n+5)
+                margin-bottom: 4rem
