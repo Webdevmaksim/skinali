@@ -99,8 +99,7 @@
     transition: all 0.3s
     transform: translateY(-110%)
     opacity: 0
-    z-index: 2
-
+    z-index: 4
     &__wrapper
         min-height: 3.57rem
         display: flex
@@ -109,6 +108,8 @@
     &--active
         transform: translateY(0%)
         opacity: 1
+        z-index: 99999
+        // position: absolute
     &__link
         color: $light
         font-size: 1.21rem
