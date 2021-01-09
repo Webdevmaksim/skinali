@@ -6,21 +6,25 @@
     &__col
         display: flex
         flex-direction: column
-        align-items: center
-    &__block
-        justify-content: space-between
+        align-items: center 
         position: relative
         &::before
             content: ''
+            width: 100%
             background-color: rgba(126, 123, 120, 0.4)
             height: 3px
-            width: 90%
             position: absolute
             margin-left: auto
             margin-right: auto
-            left: 0
-            right: 0
-            top: 5.5rem
+            right: -63%
+            top: 25%
+        &:last-child
+            &::before
+                display: none
+    &__block
+        justify-content: space-between
+        position: relative
+        
     &__img
         margin-bottom: 1.9285rem
     &__item-name
@@ -36,7 +40,7 @@
         +reg
 @media screen and ( max-width: 1199px )
     .stages
-        &__block
+        &__col
             &::before
                 display: none
         &__col
