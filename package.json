@@ -17,14 +17,16 @@
   },
   "homepage": "https://github.com/Webdevmaksim/skinali#readme",
   "dependencies": {
-    "browser-sync": "^2.26.13",
+    "browser-sync": "^2.27.1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-clean-css": "^4.3.0",
     "gulp-htmlmin": "^5.0.1",
     "gulp-minify": "^3.1.0",
+    "gulp-pug": "^5.0.0",
     "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.1.0",
-    "gulp-tinypng-compress": "^1.2.5"
+    "gulp-sass": "^5.0.0",
+    "gulp-tinypng-compress": "^1.2.5",
+    "sass": "^1.35.1"
   }
 }

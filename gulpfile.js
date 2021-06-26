@@ -1,8 +1,9 @@
 const {src, dest, watch} = require('gulp');
 const browserSync = require('browser-sync').create();
+const pug = require('gulp-pug');
 const cleanCSS = require('gulp-clean-css');
 const rename = require('gulp-rename');
-const sass  = require('gulp-sass');
+const sass  = require('gulp-sass')(require('sass'));
 const autoprefixer = require('gulp-autoprefixer');
 const minify = require('gulp-minify');
 const htmlmin = require('gulp-htmlmin');
@@ -18,11 +19,13 @@ function end(){
 // Static server
 function bs() {
     serveSass();
+    pug_compile();
     browserSync.init({
         server: {
             baseDir: "./"
         }
     });
+    watch("./pug/**/*.pug", pug_compile);
     watch("./*.html").on('change', browserSync.reload);
     watch("./js/*.js").on('change', browserSync.reload);
     watch("./css/*.css").on('change', browserSync.reload);
@@ -40,6 +43,17 @@ function compress(){
         ignoreFiles: ['-min.js']
     }))
     .pipe(dest('./dist/js'));
+};
+
+function pug_compile (){
+    return src('./pug/*.pug')
+    .pipe(
+        pug({
+            // Your options in here.
+
+        })
+    )
+    .pipe(dest('./'));
 };
 
 function minify_h () {
@@ -60,16 +74,17 @@ function tinyPic (){
 
 // Task to minify css using package cleanCSs
 function minсss() {
-     // Folder with files to minify
-     return src(['./css/*.css', '!./css/*.min.css'])
-     //The method pipe() allow you to chain multiple tasks together 
-     //I execute the task to minify the files
-     .pipe(rename({
-        suffix: '.min'
-    }))
-    .pipe(cleanCSS())
-    //I define the destination of the minified files with the method dest
-    .pipe(dest('./dist/css'));
+        // Folder with files to minify
+            return src(['./css/*.css', '!./css/*.min.css'])
+        //The method pipe() allow you to chain multiple tasks together 
+        //I execute the task to minify the files
+            .pipe(rename({
+                suffix: '.min'
+            }))
+
+            .pipe(cleanCSS())
+        //I define the destination of the minified files with the method dest
+            .pipe(dest('./dist/css'));
 };
 
 function serveSass() {
